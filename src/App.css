@@ -5,18 +5,6 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
 
 @keyframes logo-spin {
   from {
@@ -38,5 +26,25 @@
 }
 
 .read-the-docs {
-  color: #888;
+  color: #ffffff;
+}
+.h1{
+  color: black;
+}
+
+
+body {
+  background-image: url('bg.png');
+  background-color: #ffffff;
+  
+  background-size: cover; /* Ensure the background image covers the entire body */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+}
+
+
+.card
+{
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
 }
