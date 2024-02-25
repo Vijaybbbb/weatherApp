@@ -8,8 +8,9 @@ const Card = () => {
   return (
     <div className='card'>
        <img src={weather?.data?.current?.condition?.icon} alt="" />
-       <h2 className='h1'>{weather?.data?.current?.temp_c}.C</h2>
-       <h5 className='h1'>{weather?.data?.location?.name},{weather?.data?.location?.region},{weather?.data?.location?.country}</h5>
+       {weather?.data?.current?.temp_c ? <h2 className='h1'>{weather?.data?.current?.temp_c}°C</h2> : <h3>Select your Location </h3>}
+
+       <h4 className='h1'>{weather?.data?.location?.name},{weather?.data?.location?.region},{weather?.data?.location?.country}</h4>
     </div>
   )
 }

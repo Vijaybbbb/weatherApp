@@ -1,35 +1,21 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 }
 
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
 .card {
-  padding: 2em;
+  padding: 20px;
 }
 
 .read-the-docs {
   color: #ffffff;
 }
 .h1{
-  color: black;
+  color: rgb(255, 255, 255);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
@@ -39,12 +25,68 @@ body {
   
   background-size: cover; /* Ensure the background image covers the entire body */
   background-repeat: no-repeat; /* Prevent the background image from repeating */
+  padding: 1px;
+  margin-top: 10px;
 }
 
 
 .card
 {
-  border: 1px solid;
+  border:  1px solid;
   padding: 10px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+
+}
+.input-field{
+width: 250px;
+background: #f9e0e0;
+height: 35px;
+border-radius: 10px;
+color: black;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.btn{
+  background-color: #060e54;
+  padding-top: 5px;
+  margin-left: 5px;
+}
+/* .dropdown{
+  width: 400px;
+  height: 50px;
+  background-color: white;
+  position: absolute;
+
+  
+}
+.dropdown-row{
+  width: 400px;
+  height: 25px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  color: black;
+  
+} */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-row {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-top: none;
+  cursor: pointer;
+  width: 400px;
+  height: 35px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  color: black;
+  text-align: left;
+  font-size: 15px;
+  display: none;
+  
+}
+
+.dropdown-row:hover {
+  background-color: #f9f9f9;
 }
