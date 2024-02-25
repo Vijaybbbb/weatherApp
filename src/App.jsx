@@ -17,7 +17,7 @@ function App() {
         <img src="src/Cbd.gif" alt="" style={{width:'200px',position:'absolute',right:'20px',top:'9px'}} />
         <h1 className='h1'>Weather Forecast</h1>
         <Input/>
-        <Button onClick={weather.fetchData} value="Search"/><br /><br />
+        <Button fetchData={weather.fetchData} setCurrentValue={weather.setCurrentValue} value="Search"/><br /><br />
         <Suggessions/>
 
         <Card /><br />

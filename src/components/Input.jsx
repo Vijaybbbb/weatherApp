@@ -13,6 +13,7 @@ const Input =() => {
     value={weather.searchCity}
     
     onChange={(e)=>{ 
+      weather.setSearchCity(e.target.value)
       weather.suggestPlaces(e.target.value)
       weather.suggestedData(e.target.value) 
       weather.currentSearchValue(e.target.value)

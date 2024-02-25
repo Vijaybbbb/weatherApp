@@ -27,6 +27,7 @@ export const WeatherProvider = (props) =>{
               navigator.geolocation.getCurrentPosition(async (position) => {
                 const response = await getWeatherDataForLocation(position.coords.latitude,position.coords.longitude);
                 setData(response);
+              
               });
             }, []);
 
@@ -52,6 +53,7 @@ export const WeatherProvider = (props) =>{
                      suggession,
                      setSuggession,
                      currentSearchValue,
+                     setCurrentValue,
                      currentValue
                      }}>
                      {props.children}

@@ -3,6 +3,7 @@ const baseUrl = 'https://api.weatherapi.com/v1/current.json?key=d01eb5f30b5f413d
 export const getWeatherDataForCity = async(city) =>{
 
        const response = await fetch(`${baseUrl}&q=${city}&aqi=yes`)
+       console.log(response);
        return await response.json()
 }
 
@@ -10,7 +11,12 @@ export const getWeatherDataForCity = async(city) =>{
 export const suggestPlaces = async (city) => {
        const response = await fetch(`${baseUrl}&q=${city}&aqi=yes`);
        const data = await response.json();
-       return data?.location?.name
+       if(data){
+              return data?.location?.name
+       }
+       else{
+              return 'Not Found'
+       }
       // return data.predictions.map(prediction => prediction.description);
  }
 
