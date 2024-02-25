@@ -19,8 +19,12 @@ useEffect(() => {
 }, [weather]); // Trigger effect when weather data changes
 
   return (
-    <div className='dropdown' >
-              <div className="dropdown-row" ref={box}>
+    <div className='dropdown'  >
+              <div className="dropdown-row" ref={box} onClick={()=>{
+                const value = box.current.textContent
+                weather.setSearchCity(value)
+                box.current.style.display ='none';
+              }}>
                  {weather?.suggession}
                 
               </div>

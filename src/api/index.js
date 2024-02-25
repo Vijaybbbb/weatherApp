@@ -11,8 +11,8 @@ export const getWeatherDataForCity = async(city) =>{
 export const suggestPlaces = async (city) => {
        const response = await fetch(`${baseUrl}&q=${city}&aqi=yes`);
        const data = await response.json();
-       if(data){
-              return data?.location?.name
+       if(data.location.name){
+              return data?.location?.name+','+data?.location?.region
        }
        else{
               return 'Not Found'

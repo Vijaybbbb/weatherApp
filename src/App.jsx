@@ -5,6 +5,9 @@ import Input from './components/Input'
 import Button from './components/Button'
 import { useWeather } from './context/Weather'
 import Suggessions from './components/Suggessions'
+import RefreshBtn from './components/RefreshBtn'
+import GetMylocBtn from './components/GetMylocBtn'
+
 
 function App() {
   const weather = useWeather()
@@ -14,15 +17,22 @@ function App() {
 
   return (
     <div className='App'>
-        <img src="src/Cbd.gif" alt="" style={{width:'200px',position:'absolute',right:'20px',top:'9px'}} />
+        
+        <img src="src/Cbd.gif" className='img1' alt=""  />
+        <img src="src/Cbd.gif" className='img2' alt=""  />
+        <img src="src/Cbd.gif" className='img3' alt=""  />
+
+
         <h1 className='h1'>Weather Forecast</h1>
         <Input/>
         <Button fetchData={weather.fetchData} setCurrentValue={weather.setCurrentValue} value="Search"/><br /><br />
         <Suggessions/>
 
         <Card /><br />
-        <Button value="Refresh" onClick={weather.fetchDatanull}/>
-        <Button value='get my location' onClick={()=>{weather.fetchCurrentUserLocationData()}}/>
+        <RefreshBtn  onClick={weather.fetchDatanull}/>
+        <GetMylocBtn  onClick={weather.fetchCurrentUserLocationData}/>
+
+       
         
     </div>
   )

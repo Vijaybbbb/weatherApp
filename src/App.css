@@ -84,9 +84,53 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
   text-align: left;
   font-size: 15px;
   display: none;
+  padding-top: 5px;
   
 }
 
 .dropdown-row:hover {
   background-color: #f9f9f9;
+}
+
+.img1{
+  width:200px;
+  position:absolute;
+  right:20px;
+  top:9px;
+}
+.img2{
+  width: 275px;
+    position: absolute;
+    left: 53px;
+    top: 9px;
+}
+.img3{
+  width:100px;
+  position:absolute;
+  bottom: 70px;
+  left: 140px;
+}
+
+
+
+@media (max-width:417px) {
+  .img1{
+    width: 100px;
+    position:absolute;
+    right:20px;
+    top:9px;
+  }
+  .img2{
+    width:200px;
+    position:absolute;
+    left:0px;
+    top:9px;
+  }
+  .img3{
+    width:100px;
+    position:absolute;
+    bottom: 70px;
+    left: 140px;
+  }
+  
 }
